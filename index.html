@@ -5,51 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeliMudah</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
-        .
-        .sub-header {
-            height: 64px;
-            background-color:#FFFFFF;
-        }
-        .navbar {
-            padding-right: 240px;
-            padding-left: 240px;
-            border-top: 1px solid;
-            border-color: #0000001A;
-            height: 41px;
-            background-color:#FFFFFF;
-        }
+.header {
+    width: 1280px;
+    height: 65px;
+    margin: auto;
+    background-color: azure;
+    font-family: "inter", sans-serif;
+}
+.top-header {
+    position: relative;
+    width: 1280px;
+    height: 28px;
+    margin: auto;
+    background-color: blue;
+}
+.navbar {
+    width: 1280px;
+    height: 41px;
+    margin: auto;
+    background-color: #14acac;
+}
+.content-first {
+    border: 1px solid black;
+    height: 420px;
+    margin: auto;
+    width: 1728px;
+    position: relative;
+    top: 106px;
+}
+.first-left {
+    position: absolute;
+    height: 420px;
+    width: 640px;
+    border: 1px solid red;
+    left: 224px;
+}
+.first-right {
+    position: absolute;
+    height: 420px;
+    width: 640px;
+    right: 224px;
+    border: 1px solid #6f00ff;
+}
+.top-left {
+    position: absolute;
+    display: inline-block;
+    width: 156px;
+    height: 16px;
+    bottom: 7px;
+    font-size: 12px;
+    color: azure;
+}
+.top-left img {
+    /* width: 20px; */
+    bottom: -2px;
+    height: 11px;
+    position: relative;
+}
+.top-right {
+    position: absolute;
+    display: inline-block;
+    width: 373px;
+    height: 16px;
+    bottom: 7px;
+    right: 0px;
+    font-size: 12px;
+    color: azure;
+}
+.text-top-right {
+    padding-left: 16px;
+}
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="in-header">
-            <div class="maps">
-                <img class="img-tujuan" src="./db/maps.svg" alt="map">
-                <img class="img-tujuan2" src="./db/maps2.svg" alt="map2">
-            </div>
-            <div class="header-tujuan">
-                <p>Kirim ke: Jakarta Selatan</p>
+    <div class="canvas">
+        <div class="top">
+            <div class="second-canvas">
+                <!-- Header -->
+                <div class="top-header">
+                    <div class="top-left">
+                        <img src="./db/map.svg" alt="map">
+                        <span>Kirim ke: Jakarta Selatan</span>
+                    </div>
+                    <div class="top-right">
+                        <span>📞 0800-1234-5678 (Gratis)</span>
+                        <span class="text-top-right">🚀 Gratis ongkir di atas Rp 100.000</span>
+                    </div>
+                </div>
+                <div class="header"></div>
+                <div class="navbar"></div>
+                <!-- Header End -->
+                <div class="main"></div>
             </div>
         </div>
-        <div class="right-header">
-            <div class="text-right-header">
-                <p><span style="margin-right: 30px;">📞 0800-1234-5678 (Gratis)</span> <span>🚀 Gratis ongkir di atas Rp 100.000</span></p>
-            </div>
-        </div>
-    </div>
 
-    <div class="sub-header">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <!-- Content -->
+        <div class="content-first">
+            <div class="first-left"></div>
+            <div class="first-right"></div>
+        </div>
+        <!--  Contend End -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-first"></div>
+            <div class="footer-second"></div>
+            <div class="footer-third"></div>
+        </div>
     </div>
-    <div class="navbar"></div>
 </body>
 </html>             
