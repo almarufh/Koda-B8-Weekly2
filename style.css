@@ -1,58 +1,22 @@
-
-        body {
-            background-color: blueviolet;
-            height: auto;
-            width: 1280;
-            margin: 0px;
-            overflow-x: hidden;
-        }
-        .header {
-            height: 28px;
-            background-color:#1A73E8;
-            padding-top: 6px;
-            padding-bottom: 6px;
-            padding-left: 125px;
-            padding-right: 4px;
-        }
-        .in-header {
-            position: relative;
-            background-color: #1A73E8;
-            width: 156px;
-            vertical-align: top;
-            height: 16px;
-            padding: 4px;
-        }
-        .maps {
-            position: relative;
-            top: 3px;
-        }
-        .header-tujuan {
-            position: absolute;
-            display: inline-block;
-            font-size: 10px;
-            font-family: Arial, Helvetica, sans-serif;        
-            line-height: 0px;
-            letter-spacing: 0%;
-            vertical-align: middle;
-            color:#FFFFFF;
-            bottom: 2px;
-            margin-left: 14px;
-        }
-        .img-tujuan {
-            position: absolute;
-            display: inline-block;
-            width: 2.75px;
-            height: 2.75px;
-            top: 3.21px;
-            left: 4.13px;
-            border: 0.92px;
-        }
-        .img-tujuan2 {
-            position: absolute;
-            display: inline-block;
-            width: 7.33px;
-            height: 9.17px;
-            top: 0.92px;
-            left: 1.83px;
-            border: 0.92px;
-        }
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.canvas {
+    width: auto;
+    height: 5000px;
+    background-color: bisque;
+}
+.top {
+    background-color: blue;
+    height: 28px;
+    margin: auto;
+    width: 1728px;
+}
+.second-canvas {
+    background-color: #212124;
+    height: 28px;
+    margin: auto;
+    width: 1280px;
+}

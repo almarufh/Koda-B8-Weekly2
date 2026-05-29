@@ -6,50 +6,94 @@
     <title>BeliMudah</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .
-        .sub-header {
-            height: 64px;
-            background-color:#FFFFFF;
-        }
-        .navbar {
-            padding-right: 240px;
-            padding-left: 240px;
-            border-top: 1px solid;
-            border-color: #0000001A;
-            height: 41px;
-            background-color:#FFFFFF;
-        }
+.header {
+    width: 1280px;
+    height: 65px;
+    margin: auto;
+    background-color: azure;
+}
+.top-header {
+    position: relative;
+    width: 1280px;
+    height: 28px;
+    margin: auto;
+    background-color: blue;
+}
+.navbar {
+    width: 1280px;
+    height: 41px;
+    margin: auto;
+    background-color: #14acac;
+}
+.content-first {
+    border: 1px solid black;
+    height: 420px;
+    margin: auto;
+    width: 1728px;
+    position: relative;
+    top: 106px;
+}
+.first-left {
+    position: absolute;
+    height: 420px;
+    width: 640px;
+    border: 1px solid red;
+    left: 224px;
+}
+.first-right {
+    position: absolute;
+    height: 420px;
+    width: 640px;
+    right: 224px;
+    border: 1px solid #6f00ff;
+}
+.top-left {
+    position: absolute;
+    display: inline-block;
+    background-color: azure;
+    width: 156px;
+    height: 16px;
+    bottom: 8px;
+}
+.top-left {
+    position: absolute;
+    display: inline-block;
+    background-color: azure;
+    width: 156px;
+    height: 16px;
+    bottom: 8px;
+}
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="in-header">
-            <div class="maps">
-                <img class="img-tujuan" src="./db/maps.svg" alt="map">
-                <img class="img-tujuan2" src="./db/maps2.svg" alt="map2">
-            </div>
-            <div class="header-tujuan">
-                <p>Kirim ke: Jakarta Selatan</p>
+    <div class="canvas">
+        <div class="top">
+            <div class="second-canvas">
+                <!-- Header -->
+                <div class="top-header">
+                    <div class="top-left"></div>
+                    <div class="top-right"></div>
+                </div>
+                <div class="header"></div>
+                <div class="navbar"></div>
+                <!-- Header End -->
+                <div class="main"></div>
             </div>
         </div>
-        <div class="right-header">
-            <div class="text-right-header">
-                <p><span style="margin-right: 30px;">📞 0800-1234-5678 (Gratis)</span> <span>🚀 Gratis ongkir di atas Rp 100.000</span></p>
-            </div>
-        </div>
-    </div>
 
-    <div class="sub-header">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <!-- Content -->
+        <div class="content-first">
+            <div class="first-left"></div>
+            <div class="first-right"></div>
+        </div>
+        <!--  Contend End -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-first"></div>
+            <div class="footer-second"></div>
+            <div class="footer-third"></div>
+        </div>
     </div>
-    <div class="navbar"></div>
 </body>
 </html>             
