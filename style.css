@@ -77,13 +77,60 @@ body {
     width: 1728px;
     position: relative;
     top: 106px;
+    background-image: linear-gradient(#8200DB, #4F39F6);"
 }
 .first-left {
     position: absolute;
+    display: inline-block;
     height: 420px;
     width: 640px;
-    border: 1px solid red;
     left: 224px;
+}
+.first-left-first {
+    position: absolute;
+    left: 16px;
+    top: 90.5px;
+    width: 475px;
+    height: 100px;
+    font-style: bold;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.first-left-third {
+    position: absolute;
+    border-radius: 12px;
+    left: 16px;
+    top: 281.5px;
+    width: 163px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+.first-left-third span {
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    width: 91px;
+    height: 24px;
+    color: #1A73E8;
+}
+.first-left-third img {
+    position: absolute;
+    left: 123px;
+    top: 16px;
+    width: 16px;
+    height: 16px;
+    color: #1A73E8;
+}
+.first-left-second {
+    position: absolute;
+    left: 16px;
+    top: 206.5px;
+    width: 512px;
+    height: 59px;
+    font-size: 18px;
+    color: #FFFFFFCC;
 }
 .first-right {
     position: absolute;
@@ -266,17 +313,16 @@ body {
 .all {
     position: absolute;
     display: inline-block;
-    left: 0px;
+    left: 16px;
     height: 40px;
     width: 171px;
     z-index: 444;
 }
 .grid {
     position: absolute;
-    left: 16px;
+    margin-left: 16px;
     bottom: 13px;
     top: 13px;
-
     height: 14px;
     width: 14px;
 }
