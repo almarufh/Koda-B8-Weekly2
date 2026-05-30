@@ -1,3 +1,4 @@
+/* Canvas */
 body {
     margin: 0px;
     padding: 0px;
@@ -8,15 +9,121 @@ body {
     height: 5000px;
     background-color: bisque;
 }
-.top {
-    background-color: blue;
-    height: 28px;
-    margin: auto;
-    width: 1728px;
-}
 .second-canvas {
     background-color: #212124;
     height: 28px;
     margin: auto;
     width: 1280px;
 }
+/* Canvas End */
+
+/* Top Header */
+.top {
+    background-color: blue;
+    height: 28px;
+    margin: auto;
+    width: 1728px;
+}
+.top-header {
+    position: relative;
+    width: 1280px;
+    height: 28px;
+    margin: auto;
+    background-color: blue;
+}
+.top-left {
+    left: 16px;
+    position: absolute;
+    display: inline-block;
+    width: 156px;
+    height: 16px;
+    bottom: 7px;
+    font-size: 12px;
+    color: azure;
+}
+.top-left img {
+    bottom: -2px;
+    height: 11px;
+    position: relative;
+}
+.top-right {
+    right: 16px;
+    position: absolute;
+    display: inline-block;
+    width: 373px;
+    height: 16px;
+    bottom: 7px;
+    right: 0px;
+    font-size: 12px;
+    color: azure;
+}
+.text-top-right {
+    padding-left: 16px;
+}
+/* Top Header End */
+
+
+
+/* Navbar */
+.navbar {
+    width: 1280px;
+    height: 41px;
+    margin: auto;
+    background-color: #14acac;
+}
+/* Navbart End */
+
+/* Main */
+.main {
+    position: relative;
+    top: 420px;
+    border: 1px solid gray;
+    height: 3303px;
+}
+.content-first {
+    border: 1px solid black;
+    height: 420px;
+    margin: auto;
+    width: 1728px;
+    position: relative;
+    top: 106px;
+}
+.first-left {
+    position: absolute;
+    height: 420px;
+    width: 640px;
+    border: 1px solid red;
+    left: 224px;
+}
+.first-right {
+    position: absolute;
+    height: 420px;
+    width: 640px;
+    right: 224px;
+    border: 1px solid #6f00ff;
+}
+/* Maind End */
+
+/* Footer */
+.footer {
+    border: 1px solid black;
+    height: 497px;
+    margin: auto;
+    width: 1728px;
+    position: relative;
+    top: 3409px;
+    font-size: 0px;
+}
+.footer-first {
+    border: 1px solid green;
+    height: 105px;
+}
+.footer-second {
+    border: 1px solid green;
+    height: 338px;
+}
+.footer-third {
+    border: 1px solid #110080;
+    height: 49px;
+}
+/* Footer End */
