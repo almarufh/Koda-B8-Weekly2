@@ -64,12 +64,7 @@
         </div>
     </header>
     <main>
-        <div class="canvas chart">
-            <span class="chart-total-all">Keranjang Belanja (1 item)</span>
-            <section class="chart-first">
-                <div class="cf-allChart"></div>
-                <div class="cf-ringkasan"></div>
-            </section>
+        <div class="canvas chart"></div>
     </main>
     <footer>
         <div class="space-footer"></div>

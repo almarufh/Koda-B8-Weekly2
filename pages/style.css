@@ -159,7 +159,6 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* height: 1366.75px; */
     width: 1728px;
 }
 .canvas {
@@ -167,9 +166,13 @@ main {
     flex-direction: column;
     align-items: center;
     border: 1px solid;
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     gap: 24px;
     padding: 12px;
+}
+.chart {
+    padding: 32px 16px;
 }
 /* Browsse Product */
 .position {
@@ -727,6 +730,16 @@ main {
     width: 298px;
 }
 /* Detail Product End */
+
+/* Chart */
+.chart-total-all {
+    font-size: 24px;
+    color: #111827;
+    align-self: flex-start;
+    width: 100%;
+    border: 1px solid red;
+}
+/* Chart End */
 
 /* Footer */
 footer {
