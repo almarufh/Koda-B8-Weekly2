@@ -5,6 +5,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #eee;
+    font-family: inter;
 }
 main {
     border: 1px solid;
@@ -23,12 +24,190 @@ main > span {
 }
 .charts {
     grid-column: span 2;
-    border: 1px solid red;
-    height: 309px;
+}
+.charts-choice > img {
+    grid-row: span auto;
+    max-width: 821.33px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #F3F4F6;
+}
+.charts-choice {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: #FFFFFF;
+    border: 1px solid #0000001A;
+    border-radius: 16px;
+    gap: 16px;
+    padding: 20px;
+}
+.chart-edit-choice {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.chart-edit-choice > button {
+    justify-self: end;
+    padding: 2px;
+    border: none;
+    background-color: transparent;
+}
+.charts-choice-color {
+    grid-column: span 2;
+}
+.button-edit {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #0000001A;
+    border-radius: 8px;
+}
+.charts-choice-price {
+    justify-self: end;
+}
+.button-edit > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    background-color: transparent;
+    border: none;
+}
+.chart-whitelist {
+    display: flex;
+    grid-column: span 2;
+    align-self: center;
+    gap: 4px;
+}
+.chart-whitelist > img {
+    justify-self: center;
+    align-self: center;
+}
+.chart-whitelist > span {
+    font-size: 12px;
+    color: #6B7280;
+} 
+.code-promo {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #0000001A;
+    padding: 20px;
+    gap: 8px;
+}
+.code-promo-head {
+    display: flex;
+    font-size: 18px;
+    color: #111827;
+    gap: 8px;
+}
+.code-promo > span {
+    font-size: 18px;
+    color: #111827;
+}
+.code-promo-input {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    padding-top: 4px;
+    gap: 8px;
+    width: 100%;
+}
+.code-promo-input > input {
+    border-radius: 12px;
+    padding: 11.5px 16px;
+    color: #11182780;
+    background-color: #F3F4F6;
+    border: 1px solid #0000001A;
+    font-size: 14px;
+}
+.code-promo-input > button {
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 11px 20px;
+}
+.code-promo > span:nth-child(3) {
+    font-size: 12px;
+    color: #6B7280;
 }
 .chart-description {
-    border: 1px solid red;
-    height: 309px;
+    border: 1px solid #0000001A;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+.chart-description > span:nth-child(1) {
+    grid-column: span 2;
+    font-size: 18px;
+    color: #111827;
+}
+.chart-description > span:nth-child(2) {
+    color: #111827;
+    font-size: 14px;
+    color: #6B7280;
+}
+.chart-description > span:nth-child(3) {
+    justify-self: end;
+    font-size: 18px;
+    color: #111827;
+    font-size: 14px;
+    color: #6B7280;
+}
+.chart-description > span:nth-child(4) {
+    color: #111827;
+    font-size: 14px;
+    color: #6B7280;
+}
+.chart-description > span:nth-child(5) {
+    justify-self: end;
+    font-size: 18px;
+    color: #111827;
+    font-size: 14px;
+    color: #00A63E;
+}
+.chart-description > span:nth-child(6) {
+    color: #111827;
+    font-size: 14px;
+    color: #111827;
+}
+.chart-description > span:nth-child(7) {
+    color: #111827;
+    justify-self: end;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1A73E8;
+}
+.chart-description-guranted {
+    grid-column: span 2;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    color: #111827;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #6B7280;
+}
+.chart-description > button {
+    grid-column: span 2;
+    display: flex;
+    background-color: #F97316;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 0px;
+    border-radius: 12px;
+    border: none;
+}
+.chart-description > button > span {
+    font-size: 16px;
+    color: #FFFFFF;
+    align-items: center
 }
 .cards {
     display: grid;
@@ -94,4 +273,24 @@ main > span {
     text-decoration: line-through;
     color: #6B7280;
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main > span,
+    .cards,
+    .chart-description {
+        grid-column: span 2;
+    }
+
+    .charts {
+        grid-column: span 2;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
