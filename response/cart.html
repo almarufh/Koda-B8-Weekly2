@@ -4,13 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main-Chart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="chart">
         <span class="span-first">Keranjang Belanja (1 item)</span>
-        <div class="charts"></div>
-        <div class="chart-description"></div>
+        <div class="charts">
+            <div class="charts-choice">
+                <img src="/assets//Headphone Wireless Premium.svg" alt="Headphone">
+                <div class="chart-edit-choice">
+                    <span>Headphone Wireless Premium</span>
+                    <button><img src="/assets/delete.svg" alt="delete"></button>
+                    <span class="charts-choice-color">Hitam</span>
+                    <div class="button-edit">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    <span class="charts-choice-price">Rp 450.000</span>
+                    <div class="chart-whitelist">
+                        <img src="/assets/love12px.svg" alt="Love">
+                        <span>Simpan ke Wishlist</span>
+                    </div>
+                </div>
+            </div>
+            <div class="code-promo">
+                <div class="code-promo-head">
+                    <img src="/assets/badgeBlue.svg" alt="tag Blue">
+                    <span>Kode Promo</span>
+                </div>
+                <div class="code-promo-input">
+                    <input type="text" placeholder="Masukkan kode promo">
+                    <button>Terapkan</button>
+                </div>
+                <span>Coba: HEMAT10, BELIMUDAH, atau NEWUSER</span>
+            </div>
+        </div>
+        <div class="chart-description">
+            <span>Ringkasan Pesanan</span>
+            <span>Subtotal (1 item)</span>
+            <span>Rp 450.000</span>
+            <span>Ongkos Kirim</span>
+            <span>GRATIS</span>
+            <span>Total</span>
+            <span>Rp 450.000</span>
+            <button>
+                <img src="/assets/guard16px.svg" alt="Guard">
+                <span>Checkout Aman</span>
+            </button>
+            <div class="chart-description-guranted">
+                <span>🔒 Pembayaran 100% Aman</span>
+                <span>Metode: Transfer Bank · Virtual Account · Kartu Kredit · e-
+                Wallet</span>
+            </div>
+        </div>
         <span>Mungkin Kamu Suka Ini</span>
         <div class="cards">
             <a href="/index.html" class="card">
