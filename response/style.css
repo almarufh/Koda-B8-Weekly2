@@ -446,9 +446,8 @@ footer {
     display: flex;
     flex-direction: column;
     bottom: 0px;
-    width: 1728px;
+    width: 100%;
     max-width: 1728px;
-    height: 556px;
     background-color: #111827;
 }
 .space-footer {
@@ -460,7 +459,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 105px;
+    height: 100%;
     width: 1280px;
     padding-right: 16px;
     padding-right: 16px;
@@ -659,6 +658,7 @@ footer {
 
 @media (max-width: 768px) {
     .top-header {
+        display: none;
         order: 2;
         border-radius: 6px;
     }
@@ -666,6 +666,7 @@ footer {
         order: 1;
     }
     .navbar {
+        display: none;
         order: 3;
         border-radius: 18px;
     }
@@ -695,6 +696,7 @@ footer {
         order: 2;
     }
     .navbar > .in-navbar > ul {
+        display: none;
         flex-direction: column;
         /* gap: 4px; */
     }
