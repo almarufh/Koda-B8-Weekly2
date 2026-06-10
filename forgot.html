@@ -40,87 +40,55 @@
 
     <aside class="right p-[10px] md:p-[20%]">
         <div class="flex flex-col w-full h-full gap-8 m-auto">
-            <div class="flex flex-col gap-1">
-                <span class="self-start font-bold text-6" >Masuk ke Akun</span>
+            <div class="flex gap-2 text-14px text-[#6B7280]">
+                <img src="/assets/auth/Forgot/back.svg" alt="">
+                <span>Kembali ke Login</span>
+            </div>
+            <div class="flex flex-col gap-2">
+                <span class="self-start font-bold text-6" >Lupa Kata Sandi?</span>
                 <div class="text-4 text-[#6B7280]">
-                    <span>Sudah punya akun?</span>
-                    <a action="_blank" href="daftar.html" class="text-[#1A73E8]">Masuk di sini</a>
+                    <span>
+                        Tidak perlu khawatir. Masukkan email yang terdaftar dan kami akan mengirimkan tautan untuk membuat kata sandi baru.
+                    </span>
                 </div>
-            </div>
-            <div class="grid grid-cols-2 text-[14px] font-medium justify-between text-[#6B7280] gap-3">
-                <button type="button" class="w-full border rounded-[12px] py-[12px]">Google</button>
-                <button type="button" class="w-full border rounded-[12px] py-[12px]">Facebook</button>
-            </div>
-            <div class="grid grid-cols-[1fr_auto_1fr] gap-3 items-center w-full">
-                <div class="border-t border-[#0000001A] w-full"></div>
-                
-                <span class="text-[12px] text-[#6B7280] whitespace-nowrap">atau daftar dengan email</span>
-                
-                <div class="border-t border-[#0000001A] w-full"></div>
             </div>
             <form class="flex flex-col gap-5">
                 <div>
-                    <label for="fullName" class="text-[14px] text-[#111827]">Nama Lengkap</label>
-                    <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
-                        <img src="/assets/auth/register/person.svg" alt="person">
-                        <input 
-                        id="fullName"
-                        class="bg-transparent w-full outline-none"  
-                        name="fullName" 
-                        type="email" 
-                        placeholder="Nama lengkap kamu">
-                    </div>
-                </div>
-                <div>
-                    <label for="emailRegister" class="text-[14px] text-[#111827]">Email</label>
+                    <label for="emailForgot" class="text-[14px] text-[#111827]">Alamat Email</label>
                     <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
                         <img src="/assets/auth/email.svg" alt="Email">
                         <input 
-                        id="emailRegister"
+                        id="emailForgot"
                         class="bg-transparent w-full outline-none"  
-                        name="emailRegister" 
+                        name="emailForgot" 
                         type="email" 
                         placeholder="email@contoh.com">
                     </div>
                 </div>
-                <div>
-                    <label for="passwordRegister" class="text-[14px] text-[#111827]">Kata Sandi</label>
-                    <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
-                        <img src="/assets/auth/sandi.svg" alt="Email">
-                        <input 
-                        id="passwordRegister"
-                        class="bg-transparent w-full outline-none"  
-                        name="passwordRegister" 
-                        type="password" 
-                        placeholder="Minimal 6 karakter">
-                    </div>
-                </div>
-                <div>
-                    <label for="confirmPassword" class="text-[14px] text-[#111827]">Konfirmasi Kata Sandi</label>
-                    <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
-                        <img src="/assets/auth/sandi.svg" alt="Email">
-                        <input 
-                        id="confirmPassword"
-                        class="bg-transparent w-full outline-none"  
-                        name="confirmPassword" 
-                        type="password" 
-                        placeholder="Ulangi kata sandi">
-                    </div>
-                </div>
-                <div class="flex items-start gap-2 text-[14px]">
-                    <input type="checkbox" name="time_access" value="30">
-                    <p class="text-left text-[12px] text-[#6B7280]">
-                        Saya menyetujui <a class="text-[#1A73E8]" href="">Syarat & Ketentuan</a> dan <a class="text-[#1A73E8]" href="#">Kebijakan Privasi</a> BeliMudah
-                    </p>
-                </div>
-                <button class="flex bg-[#F97316] items-center justify-center gap-2 p-[14px] rounded-[12px]">
-                    <span class="text-[#FFFFFF] text-[16px]">Daftar Sekarang</span>
-                    <img src="/assets/auth/register/pintu.svg" alt="Pintu">
+                <button class="flex bg-[#1A73E8] items-center justify-center gap-2 p-[14px] rounded-[12px]">
+                    <img src="/assets/auth/Forgot/send.svg" alt="Pintu">
+                    <span class="text-[#FFFFFF] text-[16px]">Kirim Tautan Reset</span>
                 </button>
             </form>
-            <span class="self-center text-[12px] text-[#6B7280]">🔒 Data kamu aman dan terenkripsi</span>
+            <div class="flex flex-col bg-[#E5E7EB80] gap-3 p-5 rounded-[16px]">
+                <span class="font-bold text-[14px]">💡 Tips keamanan:</span>
+                <ul class="flex flex-col gap-[6px] list-none text-[#6B7280] text-[12px]">
+                    <li class="flex items-start">
+                        <span class="mr-2">•</span>
+                        <span>Pastikan kamu memeriksa folder spam/junk email</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2">•</span>
+                        <span>Tautan reset hanya berlaku selama 30 menit</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2">•</span>
+                        <span>Jangan bagikan tautan reset kepada siapapun</span>
+                    </li>
+                </ul>
+            </div>
+            <p class="self-center text-[#6B7280] text-[14px]">Ingat kata sandi kamu? <a class="text-[#1A73E8]" href="login.html">Masuk sekarang</a></p>
         </div>
     </aside>
-
 </body>
 </html>
