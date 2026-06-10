@@ -162,7 +162,7 @@ header {
 }
 /* Main */
 
-main {
+main.chart {
     width: 100%;
     max-width: 1280px;
     display: grid;
@@ -671,7 +671,7 @@ footer {
         padding-left: 1px;
         max-width: fit-content;
     }
-    main {
+    main.chart {
         grid-template-columns: repeat(2, 1fr);
     }
     main > span,
