@@ -16,34 +16,41 @@
         class="absolute inset-0 w-fit h-full object-cover bg-[#193CB8]"
         >
         <div class="z-10 flex gap-3 items-start h-fit items-center">
-            <span class="flex justify-center items-center bg-[#1A73E8] rounded-lg h-fit px-3 py-2 text-[12px] text-[#FFFFFF]"">B</span>
+            <span class="flex justify-center items-center bg-[#FFFFFF33] rounded-[12px] h-fit px-3 py-2 text-[12px] text-[#FFFFFF]">B</span>
             <span class="py-2 text-[16px] text-[#FFFFFF] font-medium">BeliMudah</span>
         </div>
         <div class="z-10 flex flex-col justify-between gap-4">
             <span class="font-bold text-[32px] text-[#FFFFFF]">
-                Belanja lebih<br>
-                mudah, hidup lebih<br>
-                praktis
+                Bergabung dengan<br>
+                500.000+ pelanggan<br>
+                puas
             </span>
-            <span class="text-[16px] text-[#FFFFFFB2]">
-                Ribuan produk pilihan dengan harga<br>
-                terbaik, pengiriman cepat, dan<br>pembayaran yang aman.
-            </span>
-            <div class="z-10 flex gap-[24px]">
-                <div class="flex flex-col">
-                    <span class="text-[20px] font-bold text-[#FFFFFF]">10rb+</span>
-                    <span class="text-[12px] text-[#FFFFFF99]">Produk</span>
+            <div class="flex flex-col gap-3">
+                <div class="flex gap-3">
+                    <div class="bg-[#FFFFFF33] rounded-[999px] w-[20px] h-[20px] grid place-items-center">
+                        <img class="aspect-square" src="/assets/auth/register/ceklis.svg" alt="Ceklist">
+                    </div>
+                    <span class="text-[14px] text-[#FFFFFFCC]">Akses ribuan produk dengan harga terbaik</span>
                 </div>
-                <div class="flex flex-col">
-                    <span class="flex flex-col">
-                    <span class="text-[20px] font-bold text-[#FFFFFF]">500rb+</span>
-                    <span class="text-[12px] text-[#FFFFFF99]">Pelanggan</span>
+                <div class="flex gap-3">
+                    <div class="bg-[#FFFFFF33] rounded-[999px] w-[20px] h-[20px] grid place-items-center">
+                        <img class="aspect-square" src="/assets/auth/register/ceklis.svg" alt="Ceklist">
+                    </div>
+                    <span class="text-[14px] text-[#FFFFFFCC]">Lacak pesanan secara real-time</span>
                 </div>
-                <div class="flex flex-col">
-                    <span class="flex flex-col">
-                    <span class="text-[20px] font-bold text-[#FFFFFF]">4.8★</span>
-                    <span class="text-[12px] text-[#FFFFFF99]">Rating</span>
+                <div class="flex gap-3">
+                    <div class="bg-[#FFFFFF33] rounded-[999px] w-[20px] h-[20px] grid place-items-center">
+                        <img class="aspect-square" src="/assets/auth/register/ceklis.svg" alt="Ceklist">
+                    </div>
+                    <span class="text-[14px] text-[#FFFFFFCC]">Simpan wishlist & alamat favorit</span>
                 </div>
+                <div class="flex gap-3">
+                    <div class="bg-[#FFFFFF33] rounded-[999px] w-[20px] h-[20px] grid place-items-center">
+                        <img class="aspect-square" src="/assets/auth/register/ceklis.svg" alt="Ceklist">
+                    </div>
+                    <span class="text-[14px] text-[#FFFFFFCC]">Dapatkan notifikasi promo eksklusif</span>
+                </div>
+            </div>
             </div>
         </div>
         <span class="z-10 text-[12px] text-[#FFFFFF66] ">© 2026 BeliMudah. Seluruh hak cipta dilindungi.</span>
@@ -65,49 +72,71 @@
             <div class="grid grid-cols-[1fr_auto_1fr] gap-3 items-center w-full">
                 <div class="border-t border-[#0000001A] w-full"></div>
                 
-                <span class="text-[12px] text-[#6B7280] whitespace-nowrap">atau masuk dengan email</span>
+                <span class="text-[12px] text-[#6B7280] whitespace-nowrap">atau daftar dengan email</span>
                 
                 <div class="border-t border-[#0000001A] w-full"></div>
             </div>
             <form class="flex flex-col gap-5">
                 <div>
-                    <label for="email" class="text-[14px] text-[#111827]">Email</label>
+                    <label for="fullName" class="text-[14px] text-[#111827]">Nama Lengkap</label>
+                    <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
+                        <img src="/assets/auth/register/person.svg" alt="person">
+                        <input 
+                        id="fullName"
+                        class="bg-transparent w-full outline-none"  
+                        name="fullName" 
+                        type="email" 
+                        placeholder="Nama lengkap kamu">
+                    </div>
+                </div>
+                <div>
+                    <label for="emailRegister" class="text-[14px] text-[#111827]">Email</label>
                     <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
                         <img src="/assets/auth/email.svg" alt="Email">
                         <input 
+                        id="emailRegister"
                         class="bg-transparent w-full outline-none"  
-                        name="email" 
+                        name="emailRegister" 
                         type="email" 
                         placeholder="email@contoh.com">
                     </div>
                 </div>
                 <div>
-                    <div class="flex text-[14px] text-[#111827] justify-between">
-                        <label for="sandi" class="">Kata Sandi </label>
-                        <a class="text-[#1A73E8]" href="#" action="_blank">Lupa kata sandi?</a>
-                    </div>
+                    <label for="passwordRegister" class="text-[14px] text-[#111827]">Kata Sandi</label>
                     <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
-                        <img src="/assets/auth/sandi.svg" alt="Sandi">
+                        <img src="/assets/auth/sandi.svg" alt="Email">
                         <input 
+                        id="passwordRegister"
                         class="bg-transparent w-full outline-none"  
-                        name="sandi" 
-                        type="email" 
-                        placeholder="Masukan kata sandi">
+                        name="passwordRegister" 
+                        type="password" 
+                        placeholder="Minimal 6 karakter">
                     </div>
                 </div>
-                <div class="flex gap-2 text-[14px]">
-                    <input type="checkbox" name="time_access" value="30">
-                    <label class="text-[#6B7280]" for="time_access">Ingat saya selama 30 hari</label>
+                <div>
+                    <label for="confirmPassword" class="text-[14px] text-[#111827]">Konfirmasi Kata Sandi</label>
+                    <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
+                        <img src="/assets/auth/sandi.svg" alt="Email">
+                        <input 
+                        id="confirmPassword"
+                        class="bg-transparent w-full outline-none"  
+                        name="confirmPassword" 
+                        type="password" 
+                        placeholder="Ulangi kata sandi">
+                    </div>
                 </div>
-                <button class="flex bg-[#1A73E8] items-center justify-center gap-2 p-[14px] rounded-[12px]">
-                    <img src="/assets/auth/masuk.svg" alt="Pintu">
-                    <span class="text-[#FFFFFF] text-[16px]">Masuk</span>
+                <div class="flex items-start gap-2 text-[14px]">
+                    <input type="checkbox" name="time_access" value="30">
+                    <p class="text-left text-[12px] text-[#6B7280]">
+                        Saya menyetujui <a class="text-[#1A73E8]" href="">Syarat & Ketentuan</a> dan <a class="text-[#1A73E8]" href="#">Kebijakan Privasi</a> BeliMudah
+                    </p>
+                </div>
+                <button class="flex bg-[#F97316] items-center justify-center gap-2 p-[14px] rounded-[12px]">
+                    <span class="text-[#FFFFFF] text-[16px]">Daftar Sekarang</span>
+                    <img src="/assets/auth/register/pintu.svg" alt="Pintu">
                 </button>
             </form>
-            <span class="self-center text-[12px] text-[#6B7280]">🔒 Login aman dengan enkripsi SSL 256-bit</span>
-            <p class="text-center text-[12px] text-[#6B7280]">
-                Dengan masuk, kamu menyetujui <a class="text-[#1A73E8]" href="">Syarat & Ketentuan</a> dan <a class="text-[#1A73E8]" href="">Kebijakan Privasi</a> kami.
-            </p>
+            <span class="self-center text-[12px] text-[#6B7280]">🔒 Data kamu aman dan terenkripsi</span>
         </div>
     </aside>
 
