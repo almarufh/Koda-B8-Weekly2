@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth-Forgot password</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="grid grid-cols-1 md:grid-cols-2 m-[20px_25px] w-full h-screen font-[inter] m-auto">
+    
+    <aside class="relative left hidden md:flex flex-col justify-between border border-red-900 w-full h-full p-12">
+        <img 
+        src="/assets/auth/Forgot/Security.svg" 
+        alt="Shoping"
+        class="absolute inset-0 w-fit h-full object-cover bg-[#193CB8]"
+        >
+        <div class="z-10 flex gap-3 items-start h-fit items-center">
+            <span class="flex justify-center items-center bg-[#FFFFFF33] rounded-[12px] h-fit px-3 py-2 text-[12px] text-[#FFFFFF]">B</span>
+            <span class="py-2 text-[16px] text-[#FFFFFF] font-medium">BeliMudah</span>
+        </div>
+        <div class="z-10 flex flex-col justify-between gap-4">
+            <span class="flex justify-center items-center bg-[#FFFFFF1A] rounded-[12px] w-fit h-fit px-3 py-2 text-[12px] text-[#FFFFFF]">🔐</span>
+            <span class="font-bold text-[32px] text-[#FFFFFF]">
+                Akun kamu aman<br>
+                bersama kami
+            </span>
+            <span class="text-[16px] text-[#FFFFFFB2]">
+                Kami menggunakan enkripsi tingkat militer<br>
+                untuk menjaga keamanan data dan transaksimu.
+            </span>
+            <div class="flex flex-col gap-3">
+                <span class="text-[14px] text-[#FFFFFFCC]">🔒 Enkripsi SSL 256-bit</span>
+                <span class="text-[14px] text-[#FFFFFFCC]">🛡️ Perlindungan data pribadi</span>
+                <span class="text-[14px] text-[#FFFFFFCC]">📧 Verifikasi dua langkah</span>
+            </div>
+        </div>
+        <span class="z-10 text-[12px] text-[#FFFFFF66] ">© 2026 BeliMudah. Seluruh hak cipta dilindungi.</span>
+    </aside>
+
+    <aside class="right p-[10px] md:p-[20%]">
+        <div class="flex flex-col w-full h-full gap-8 m-auto">
+            <div class="flex gap-2 text-14px text-[#6B7280]">
+                <img src="/assets/auth/Forgot/back.svg" alt="">
+                <span>Kembali ke Login</span>
+            </div>
+            <div class="flex flex-col gap-2">
+                <span class="self-start font-bold text-6" >Lupa Kata Sandi?</span>
+                <div class="text-4 text-[#6B7280]">
+                    <span>
+                        Tidak perlu khawatir. Masukkan email yang terdaftar dan kami akan mengirimkan tautan untuk membuat kata sandi baru.
+                    </span>
+                </div>
+            </div>
+            <form class="flex flex-col gap-5">
+                <div>
+                    <label for="emailForgot" class="text-[14px] text-[#111827]">Alamat Email</label>
+                    <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
+                        <img src="/assets/auth/email.svg" alt="Email">
+                        <input 
+                        id="emailForgot"
+                        class="bg-transparent w-full outline-none"  
+                        name="emailForgot" 
+                        type="email" 
+                        placeholder="email@contoh.com">
+                    </div>
+                </div>
+                <button class="flex bg-[#1A73E8] items-center justify-center gap-2 p-[14px] rounded-[12px]">
+                    <img src="/assets/auth/Forgot/send.svg" alt="Pintu">
+                    <span class="text-[#FFFFFF] text-[16px]">Kirim Tautan Reset</span>
+                </button>
+            </form>
+            <div class="flex flex-col bg-[#E5E7EB80] gap-3 p-5 rounded-[16px]">
+                <span class="font-bold text-[14px]">💡 Tips keamanan:</span>
+                <ul class="flex flex-col gap-[6px] list-none text-[#6B7280] text-[12px]">
+                    <li class="flex items-start">
+                        <span class="mr-2">•</span>
+                        <span>Pastikan kamu memeriksa folder spam/junk email</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2">•</span>
+                        <span>Tautan reset hanya berlaku selama 30 menit</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2">•</span>
+                        <span>Jangan bagikan tautan reset kepada siapapun</span>
+                    </li>
+                </ul>
+            </div>
+            <p class="self-center text-[#6B7280] text-[14px]">Ingat kata sandi kamu? <a class="text-[#1A73E8]" href="login.html">Masuk sekarang</a></p>
+        </div>
+    </aside>
+</body>
+</html>
