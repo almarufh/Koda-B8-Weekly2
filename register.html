@@ -11,7 +11,7 @@
     
     <aside class="relative left hidden md:flex flex-col justify-between border border-red-900 w-full h-full p-12">
         <img 
-        src="/assets/auth/Shopping.svg" 
+        src="/assets/auth/register/Shopping bags.svg" 
         alt="Shoping"
         class="absolute inset-0 w-fit h-full object-cover bg-[#193CB8]"
         >
@@ -62,7 +62,7 @@
                 <span class="self-start font-bold text-6" >Masuk ke Akun</span>
                 <div class="text-4 text-[#6B7280]">
                     <span>Sudah punya akun?</span>
-                    <a action="_blank" href="daftar.html" class="text-[#1A73E8]">Masuk di sini</a>
+                    <a action="_blank" href="login.html" class="text-[#1A73E8]">Masuk di sini</a>
                 </div>
             </div>
             <div class="grid grid-cols-2 text-[14px] font-medium justify-between text-[#6B7280] gap-3">
@@ -82,10 +82,11 @@
                     <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
                         <img src="/assets/auth/register/person.svg" alt="person">
                         <input 
+                        autocomplete
                         id="fullName"
                         class="bg-transparent w-full outline-none"  
                         name="fullName" 
-                        type="email" 
+                        type="text" 
                         placeholder="Nama lengkap kamu">
                     </div>
                 </div>
@@ -94,6 +95,7 @@
                     <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
                         <img src="/assets/auth/email.svg" alt="Email">
                         <input 
+                        autocomplete
                         id="emailRegister"
                         class="bg-transparent w-full outline-none"  
                         name="emailRegister" 
@@ -106,6 +108,7 @@
                     <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
                         <img src="/assets/auth/sandi.svg" alt="Email">
                         <input 
+                        autocomplete
                         id="passwordRegister"
                         class="bg-transparent w-full outline-none"  
                         name="passwordRegister" 
@@ -118,6 +121,7 @@
                     <div class="flex items-center gap-3 border border-[#0000001A] bg-[#F3F4F6] py-[13.5px] px-[16px] rounded-[12px]">
                         <img src="/assets/auth/sandi.svg" alt="Email">
                         <input 
+                        autocomplete
                         id="confirmPassword"
                         class="bg-transparent w-full outline-none"  
                         name="confirmPassword" 
@@ -126,7 +130,7 @@
                     </div>
                 </div>
                 <div class="flex items-start gap-2 text-[14px]">
-                    <input type="checkbox" name="time_access" value="30">
+                    <input type="checkbox" name="accepted" value="accepted">
                     <p class="text-left text-[12px] text-[#6B7280]">
                         Saya menyetujui <a class="text-[#1A73E8]" href="">Syarat & Ketentuan</a> dan <a class="text-[#1A73E8]" href="#">Kebijakan Privasi</a> BeliMudah
                     </p>
@@ -139,6 +143,30 @@
             <span class="self-center text-[12px] text-[#6B7280]">🔒 Data kamu aman dan terenkripsi</span>
         </div>
     </aside>
+    <script>
+        const form = document.querySelector(".right")
+        form.addEventListener("submit", (e)=> {
+            e.preventDefault()
+            const register = new FormData(e.target)
+            const data = Object.fromEntries(register.entries())
+            console.log(data)
+            const users = {
+                name: data.fullName || "-",
+                email: data.emailRegister || "-",
+                password: data.confirmPassword || "-"
+            }
+            const userSaved = window.localStorage.getItem("users")
+            let oldUsers = [];
+            if (userSaved){
+                oldUsers = JSON.parse(userSaved)
+            }
+            oldUsers.push(users)
+            console.log("Data Tersimpan", userSaved)
+            window.localStorage.setItem("users", JSON.stringify(oldUsers))
+            console.log("Users updated", users)
 
+            alert("Register Success")
+        })
+    </script>
 </body>
 </html>
