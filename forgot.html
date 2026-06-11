@@ -87,8 +87,39 @@
                     </li>
                 </ul>
             </div>
-            <p class="self-center text-[#6B7280] text-[14px]">Ingat kata sandi kamu? <a class="text-[#1A73E8]" href="login.html">Masuk sekarang</a></p>
+            <p class="self-center text-[#6B7280] text-[14px]">Ingat kata sandi kamu? <a class="text-[#1A73E8]" href="index.html">Masuk sekarang</a></p>
         </div>
     </aside>
+<script>
+    const forgotForm = document.querySelector("form");
+
+    forgotForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const emailInput = formData.get("emailForgot");
+
+        const userSaved = window.localStorage.getItem("users");
+        if (!userSaved) {
+            alert("Data pengguna belum tersedia.");
+            return;
+        }
+
+        let users = JSON.parse(userSaved);
+
+        const userIndex = users.findIndex(u => u.email === emailInput);
+
+        if (userIndex === -1) {
+            alert("Email tidak ditemukan dalam sistem kami.");
+            return;
+        }
+
+        const updatedUsers = users.filter(u => u.email !== emailInput);
+
+        window.localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+        alert("Akun berhasil dihapus. Silakan lakukan pendaftaran ulang (register) untuk membuat akses baru.");
+        window.location.href = "register.html";
+    });
+</script>
 </body>
 </html>
