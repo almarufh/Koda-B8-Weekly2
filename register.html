@@ -150,6 +150,21 @@
             const register = new FormData(e.target)
             const data = Object.fromEntries(register.entries())
             console.log(data)
+            if (!data.fullName || !data.emailRegister || !data.passwordRegister || !data.confirmPassword) {
+                alert("Seluruh kolom input Wajib diisi!");
+                return;
+            }
+
+            if (data.accepted !== "accepted") {
+                alert("Anda harus menyetujui Syarat & Ketentuan Kebijakan Privasi untuk melakukan register");
+                return;
+            }
+
+            if (data.passwordRegister !== data.confirmPassword) {
+                alert("Kata sandi dan Konfirmasi Kata Sandi tidak cocok!");
+                return;
+            }
+            
             const users = {
                 name: data.fullName || "-",
                 email: data.emailRegister || "-",
@@ -160,6 +175,14 @@
             if (userSaved){
                 oldUsers = JSON.parse(userSaved)
             }
+
+            const emailExist = oldUsers.some(user => user.email === data.emailRegister);
+        
+            if (emailExist) {
+                alert("Email sudah terdaftar! Silakan gunakan email lain atau masuk.");
+                return;
+            }
+
             oldUsers.push(users)
             console.log("Data Tersimpan", userSaved)
             window.localStorage.setItem("users", JSON.stringify(oldUsers))
