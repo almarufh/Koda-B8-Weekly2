@@ -110,6 +110,39 @@
             </p>
         </div>
     </aside>
+    <script>
+        const form = document.querySelector("form");
 
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const loginData = Object.fromEntries(formData.entries());
+            const userSaved = window.localStorage.getItem("users");
+            
+            if (!userSaved) {
+                alert("Belum ada akun terdaftar. Silakan daftar terlebih dahulu.");
+                return;
+            }
+
+            const users = JSON.parse(userSaved);
+            const user = users.find(u => u.email === loginData.email);
+
+            if (!user) {
+                alert("Email tidak ditemukan!");
+                return;
+            }
+
+            if (user.password !== loginData.sandi) {
+                alert("Kata sandi salah!");
+                return;
+            }
+            
+            window.localStorage.setItem("isLoggedIn", "true");
+            window.localStorage.setItem("currentUser", JSON.stringify(user));
+
+            window.location.href = "/old/index.html"; 
+        });
+    </script>
 </body>
 </html>
