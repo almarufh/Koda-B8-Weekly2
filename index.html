@@ -6,6 +6,7 @@
     <title>auth-login</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body class="grid grid-cols-1 md:grid-cols-2 m-[20px_25px] w-full h-screen font-[inter] m-auto">
     
@@ -111,37 +112,71 @@
         </div>
     </aside>
     <script>
-        const form = document.querySelector("form");
-
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(e.target);
-            const loginData = Object.fromEntries(formData.entries());
-            const userSaved = window.localStorage.getItem("users");
+        $(document).ready(function() {
             
-            if (!userSaved) {
-                alert("Belum ada akun terdaftar. Silakan daftar terlebih dahulu.");
-                return;
-            }
+            const login = localStorage.getItem("userActived");
 
-            const users = JSON.parse(userSaved);
-            const user = users.find(u => u.email === loginData.email);
-
-            if (!user) {
-                alert("Email tidak ditemukan!");
-                return;
+            if (login) {
+                if (userLogin.status === true) {
+                    const userLogin = JSON.parse(login);
+                    if (userLogin.expired) {
+                        const now = new Date().getTime();
+                        const thirtyDays = 30 * 24 * 60 * 60 * 1000;
+                        if (now - userLogin.expired < thirtyDays) {
+                            window.location.href = "/old/index.html";
+                        } else {
+                            localStorage.removeItem("userActived");
+                        }
+                    } else {
+                        window.location.href = "/old/index.html";
+                    }
+                }
             }
-
-            if (user.password !== loginData.sandi) {
-                alert("Kata sandi salah!");
-                return;
-            }
+        
+            $("form").on("submit", function(e) {
+                e.preventDefault();
             
-            window.localStorage.setItem("isLoggedIn", "true");
-            window.localStorage.setItem("currentUser", JSON.stringify(user));
+                const email = $("input[name='email']").val();
+                const sandi = $("input[name='sandi']").val();
+                const isRemember = $("input[name='time_access']").is(":checked");
+            
+                const userSaved = localStorage.getItem("users");
+                if (!userSaved) { 
+                    alert("Akun tidak ditemukan"); 
+                    return; 
+                }
+                
+                const users = JSON.parse(userSaved);
+                const user = users.find(u => u.email === email && u.password === sandi);
+                console.log(user)
 
-            window.location.href = "/old/index.html"; 
+                if (!user) {
+                    alert("Email atau kata sandi salah!");
+                    return;
+                }
+
+                const userActived = {
+                    status: true,
+                    email : user.email
+                }
+
+                if (isRemember) {
+                    userActived.expired =  new Date().getTime()
+                }
+                console.log(userActived)
+                localStorage.setItem("userActived", JSON.stringify(userActived));
+
+
+                alert("Login Berhasil!");
+                window.location.href = "/old/index.html";
+            });
+            
+            window.addEventListener("beforeunload", function() {
+                const isRemember = $("input[name='time_access']").is(":checked");
+                if (!isRemember) {
+                    localStorage.removeItem("userActived");
+                }
+            });
         });
     </script>
 </body>
